@@ -24,9 +24,7 @@ export default function Header() {
       <Container>
         <Img
           fixed={logoImage.childImageSharp.fixed}
-          objectFit="cover"
-          objectPosition="50% 50%"
-          alt=""
+          alt="Tecnodata logo"
         />
         <div>
           <h1>Tecnodata</h1>

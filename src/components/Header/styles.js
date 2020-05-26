@@ -19,4 +19,11 @@ export const Container = styled.div`
     color: black;
   }
 
+  h1 {
+    font-size: 10vw;
+  }
+
+  h2 {
+    font-size: 5vw;
+  }
 `;
