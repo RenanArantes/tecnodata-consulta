@@ -9,6 +9,12 @@ export const Container = styled.div`
   align-self: center;
   color: white;
 
+  img {
+    height: 3.75rem;
+    margin: auto;
+    width: 3.75rem;
+  }
+
   @media print {
     color: black;
   }
