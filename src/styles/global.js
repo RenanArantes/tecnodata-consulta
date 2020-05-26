@@ -58,6 +58,7 @@ const GlobalStyles = createGlobalStyle`
     background: rgb(255,0,0);
     background: linear-gradient(180deg, rgba(255,0,0,1) 13%, rgba(255,0,0,0.4305214185393258) 100%);
     -webkit-font-smoothing: antialiased important;
+    background-attachment: fixed;
     line-height: 1;
     font-size: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

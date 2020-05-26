@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: auto;
+  width: 100%;
   height: 130px;
   margin: 5px 5px;
   display: flexbox;
@@ -20,10 +20,28 @@ export const Container = styled.div`
   }
 
   h1 {
-    font-size: 10vw;
+    @media screen and (min-width: 601px) {
+      font-size: 80px;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 50px;
+    }
   }
 
   h2 {
-    font-size: 5vw;
+    @media screen and (min-width: 601px) {
+      font-size: 40px;
+    }
+
+    @media screen and (max-width: 600px) and (min-width: 400px){
+      font-size: 45px;
+    }
+
+    @media screen and (max-width: 350px) {
+      font-size: 5px;
+    }
   }
+
+
 `;
