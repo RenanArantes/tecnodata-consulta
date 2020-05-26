@@ -6,21 +6,24 @@ import Container from '../components/Container';
 import Title from '../components/Title';
 import Value from '../components/Value';
 import Field from '../components/Field';
+import Layout from '../components/Layout';
 
 export default function Query(props) {
   const [data, setData] = useState()
 
+  console.log(props)
+
   useEffect(() => {
-    if(props.history.location.data) {
-      localStorage.setItem('dataQuery', JSON.stringify(props.history.location.data))
-      setData(props.history.location.data)
+    if(props.data) {
+      localStorage.setItem('dataQuery', JSON.stringify(props.data))
+      setData(props.data)
     } else {
       setData(JSON.parse(localStorage.getItem('dataQuery')))
     }
-  }, [props.history.location.data])
+  }, [props.data])
 
   return(
-    <>
+    <Layout>
       {data ?
         <>
           <Container>
@@ -186,6 +189,6 @@ export default function Query(props) {
           <Title>Vazio</Title>
         </Container>
       }
-    </>
+    </Layout>
   )
 }

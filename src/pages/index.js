@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import InputMask from 'react-input-mask';
 import jsonpAdapter from 'axios-jsonp';
+import { navigate } from 'gatsby';
 
 import {FaSearch, FaSpinner } from 'react-icons/fa';
 
@@ -14,7 +15,7 @@ import { SubmitButton } from '../components/SubmitButton';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 
-const IndexPage = ({ history }) => {
+const IndexPage = () => {
   const [cnpj, setCnpj] = useState('');
   const [newCnpj, setNewCnpj] = useState('');
   const [finded, setFinded] = useState(true);
@@ -37,17 +38,14 @@ const IndexPage = ({ history }) => {
         adapter: jsonpAdapter
       });
 
-      console.log(response)
-
       setNewCnpj('');
       setCnpj(response.data);
       setLoading(false);
       setFinded(true);
 
-      history.push({
-        pathname: "/query",
-        data: response.data,
-      });
+      navigate('/query/', {
+        state: response.data
+      })
     } catch(error) {
       setLoading(false);
     }
