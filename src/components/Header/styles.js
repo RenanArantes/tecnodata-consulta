@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 100%;
+  width: 80%;
   height: 130px;
   margin: 5px 5px;
   display: flexbox;
@@ -30,18 +30,6 @@ export const Container = styled.div`
   }
 
   h2 {
-    @media screen and (min-width: 601px) {
-      font-size: 40px;
-    }
-
-    @media screen and (max-width: 600px) and (min-width: 400px){
-      font-size: 45px;
-    }
-
-    @media screen and (max-width: 350px) {
-      font-size: 5px;
-    }
+    font-size: 35px;
   }
-
-
 `;

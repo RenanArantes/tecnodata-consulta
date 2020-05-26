@@ -1,3 +1,5 @@
 import styled from 'styled-components';
 
-export const Value = styled.strong``
+const Value = styled.strong``
+
+export default Value;
